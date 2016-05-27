@@ -17,5 +17,5 @@ spec = do
     describe "modules" $ do
         it "contains at least `Main'" $ do
             withDirectory_ "test/data/options-cradle" $ do
-                mdls <- runD $ lines <$> modules
+                mdls <- runD $ lines <$> modules False
                 mdls `shouldContain` ["Data.Map"]
